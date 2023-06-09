@@ -148,7 +148,16 @@ img {
         pointer-events: auto;
     }
     .mobile-menu-container {
-        position: relative;
+        width: 100vw;
+        height: 100vh;
+        padding: 80px 35px 40px 40px;
+        margin: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     } 
     .mobile-menu-close-btn {
         position: absolute;
@@ -169,16 +178,10 @@ img {
     .mobile-menu-close-icon {
         fill: var(--dark-color);
     }
-    .mobile-menu-container {
-        width: 100%;
-        padding: 80px 35px 40px 40px;
-        margin: auto;
-    }
     .mobile-menu-list {
         display: flex;
         flex-direction: column;
         gap: 40px;
-        margin-bottom: 284px;
     }
     .mobile-menu-link {
         font-weight: 700;
@@ -251,7 +254,8 @@ img {
     }
     /*===========Customers ===========*/
     .customers-list {
-       gap: 16px;
+       column-gap: 16px;
+       row-gap: 72px;
     }
     .customers-item {
         width: calc((100% - 16px) / 2);
@@ -473,6 +477,8 @@ img {
 .customers-list {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 .customers-item {
     height: 88px;
@@ -867,6 +873,8 @@ img {
 
 /*=========== Media ruls ============*/
 
+/*============ Media tablet =============*/
+
 @media screen and (min-width: 768px) {
     /*========== Mobile =============*/
     .mobile-menu-open-btn {
@@ -998,19 +1006,22 @@ img {
     }
      /*===========Customers ===========*/
      .customers-list {
-        gap: 24px;
+        column-gap: 24px;
+        row-gap: 72px;
      }
      .customers-item {
-         width: calc((100% - 48px) / 3);
+         width: 168px;
      }
      /*============= Footer ==============*/
      .footer {
-        padding: 96px 0 96px 108px;
+        padding: 96px 0 96px 0;
+        margin: auto;
      }
      .footer-container {
         display: flex;
         flex-wrap: wrap;
         align-items: baseline;
+        max-width: 552px;
     } 
     .footer-info {
         margin-right: 24px;
@@ -1030,6 +1041,8 @@ img {
         margin-right: 24px;
     }
 }
+
+/*============ Media desktop =============*/
 
 @media screen and (min-width: 1158px) {
     /* =========== Navigation menu ========== */
